@@ -1,0 +1,62 @@
+.describing__head {
+  font-size: 36px;
+  font-weight: 400;
+  color: @font-color;
+  padding-left: 20px;
+}
+
+.describing__list {
+  .list();
+}
+
+.item__describe {
+  font-family: "Arial", sans-serif;
+  line-height: 1.29;
+  color: @add-font-color;
+}
+
+.list__item--use::before {
+  position: absolute;
+  content: "";
+  left: 20px;
+  width: 60px;
+  height: 60px;
+  background: url("../img/advantage-leaf@1x.png") no-repeat center;
+  background-color: @green-color;
+}
+
+.list__item--form::before {
+  position: absolute;
+  content: "";
+  left: 20px;
+  width: 60px;
+  height: 60px;
+  background: url("../img/advantage-powder@1x.png") no-repeat center;
+  background-color: @green-color;
+}
+
+.list__item--food::before {
+  position: absolute;
+  content: "";
+  left: 20px;
+  width: 60px;
+  height: 60px;
+  background: url("../img/advantage-dining@1x.png") no-repeat center;
+  background-color: @green-color;
+}
+
+.list__item--time::before {
+  position: absolute;
+  content: "";
+  left: 20px;
+  width: 60px;
+  height: 60px;
+  background: url("../img/advantage-clock@1x.png") no-repeat center;
+  background-color: @green-color;
+}
+
+.list__item {
+  position: relative;
+  padding-left: 100px;
+  padding-bottom: 1px;
+}
