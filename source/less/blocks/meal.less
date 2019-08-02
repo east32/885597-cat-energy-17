@@ -1,0 +1,222 @@
+.meal__background {
+  margin-bottom: 25px;
+  margin-left: -20px;
+  width: 320px;
+  height: 455px;
+  background: url("../img/index-can-mobile@1x.png") no-repeat 50% 90%,
+    url("../img/index-background-mobile@1x.jpg") no-repeat;
+}
+
+.meal__header {
+  padding-top: 29px;
+  width: 250px;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+  color: @bg-color;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.meal__slogan {
+  padding-bottom: 290px;
+  text-transform: uppercase;
+  padding-top: 8px;
+  line-height: 14px;
+  text-align: center;
+  color: @bg-color;
+}
+
+.meal__pick {
+  padding: 0 auto;
+  margin: auto;
+  line-height: 40px;
+  text-transform: uppercase;
+  display: block;
+  width: 280px;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+  background-color: @green-color;
+}
+
+.meal__programm {
+  .list();
+}
+
+.programm__item {
+  margin-bottom: 15px;
+}
+
+.programm__tittle {
+  position: relative;
+  padding-left: 90px;
+  font-size: 24px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: @font-color;
+  margin-top: 7px;
+  margin-bottom: 36px;
+}
+
+.programm__description {
+  font-family: "Arial", sans-serif;
+  line-height: 1.29;
+  padding-left: 20px;
+  padding-right: 35px;
+  color: @add-font-color;
+  border-bottom: 1px solid #e6e6e6;
+  padding-bottom: 24px;
+}
+
+.programm__catalog {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: @font-color;
+  padding-left: 20px;
+}
+
+.programm__background {
+  position: relative;
+  top: 45px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: @green-color;
+  border-radius: 50px;
+}
+
+.programm__tittle--diet::before {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 49px;
+  background: url("../img/icon-cat-slim.svg") no-repeat center;
+  left: 30px;
+  top: -15px;
+}
+
+.programm__tittle--weight::before {
+  content: "";
+  position: absolute;
+  width: 67px;
+  height: 28px;
+  background: url("../img/icon-cat-pro.svg") no-repeat center;
+  left: 12px;
+  top: 0;
+}
+
+@media (min-width: @tablets) {
+  .meal__background {
+    width: 709px;
+    height: 829px;
+    background: url("../img/index-can-tablet@1x.jpg") no-repeat 0 230px;
+  }
+
+  .meal__header {
+    text-align: left;
+    margin-left: 90px;
+    width: 415px;
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 1;
+    color: @font-color;
+    margin-bottom: 33px;
+  }
+
+  .meal__slogan {
+    width: 285px;
+    margin-left: 90px;
+    font-size: 20px;
+    font-weight: 400;
+    color: @font-color;
+    padding-bottom: 40px;
+  }
+
+  .meal__pick {
+    margin-left: 90px;
+    font-size: 20px;
+    line-height: 52px;
+    text-transform: uppercase;
+    display: block;
+    width: 245px;
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: @green-color;
+  }
+
+  .programm__tittle {
+    padding-left: 25px;
+    position: relative;
+    font-size: 36px;
+    line-height: 1.03;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: @font-color;
+    margin-top: 7px;
+    margin-bottom: 36px;
+  }
+
+  .programm__background {
+    position: absolute;
+    top: 45px;
+    left: 450px;
+    width: 200px;
+    height: 200px;
+    background-color: @green-color;
+    border-radius: 200px;
+  }
+
+  .programm__description {
+    border: none;
+    padding-right: 0;
+    padding-left: 25px;
+    width: 400px;
+    font-family: "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 1.29;
+    color: @add-font-color;
+  }
+
+  .programm__item {
+    margin-bottom: 170px;
+    position: relative;
+  }
+
+  .programm__tittle--diet::before {
+    content: "";
+    position: absolute;
+    width: 141px;
+    height: 194px;
+    background: url("../img/icon-cat-slim.svg") no-repeat center;
+    left: 480px;
+    top: 33px;
+  }
+
+  .programm__tittle--weight::before {
+    content: "";
+    position: absolute;
+    width: 268px;
+    height: 113px;
+    background: url("../img/icon-cat-pro.svg") no-repeat center;
+    left: 410px;
+    top: 80px;
+  }
+
+  .programm__catalog {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: @font-color;
+    padding-left: 25px;
+  }
+}
+
+
+// @media (min-width: @desktops) {
+
+// }

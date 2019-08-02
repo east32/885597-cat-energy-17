@@ -1,0 +1,137 @@
+.describing {
+  padding-top: 7px;
+}
+
+.describing__head {
+  font-size: 36px;
+  font-weight: 400;
+  color: @font-color;
+  margin-bottom: 45px;
+}
+
+.describing__list {
+  .list();
+}
+
+.describing__wrapper {
+  margin-bottom: 20px;
+}
+
+.item__describe {
+  font-family: "Arial", sans-serif;
+  line-height: 1.29;
+  color: @add-font-color;
+}
+
+.list__item--use::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  width: 60px;
+  height: 60px;
+  background: url("../img/advantage-leaf@1x.png") no-repeat center;
+  background-color: @green-color;
+}
+
+.list__item--form::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  width: 60px;
+  height: 60px;
+  background: url("../img/advantage-powder@1x.png") no-repeat center;
+  background-color: @green-color;
+}
+
+.list__item--food::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  width: 60px;
+  height: 60px;
+  background: url("../img/advantage-dining@1x.png") no-repeat center;
+  background-color: @green-color;
+}
+
+.list__item--time::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  width: 60px;
+  height: 60px;
+  background: url("../img/advantage-clock@1x.png") no-repeat center;
+  background-color: @green-color;
+}
+
+.list__item {
+  position: relative;
+  padding-left: 80px;
+  margin-bottom: 27px;
+}
+
+@media (min-width: @tablets) {
+  .describing__head {
+    font-size: 60px;
+    font-weight: 400;
+    color: #111111;
+    margin-bottom: 180px;
+  }
+
+  .describing__list {
+    .list();
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .list__item {
+    padding: 0;
+    width: 50%;
+    position: relative;
+  }
+
+  .list__item:first-child {
+    margin-bottom: 250px;
+  }
+
+  .list__item:nth-child(2) {
+    margin-bottom: 250px;
+  }
+
+  .item__describe {
+    width: 245px;
+    font-size: 16px;
+    font-family: "Arial", sans-serif;
+    line-height: 1.5;
+    color: #444444;
+  }
+
+  .item__describe br {
+    display: none;
+  }
+
+  .list__item::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: -90px;
+    width: 80px;
+    height: 80px;
+    background-color: @green-color;
+  }
+
+  &--use::before {
+    background: url("../img/advantage-leaf@1x.png") no-repeat center;
+  }
+
+  &--form::before {
+    background: url("../img/advantage-powder@1x.png") no-repeat center;
+  }
+
+  &--food::before {
+    background: url("../img/advantage-dining@1x.png") no-repeat center;
+  }
+
+  &--time::before {
+    background: url("../img/advantage-clock@1x.png") no-repeat center;
+  }
+}
