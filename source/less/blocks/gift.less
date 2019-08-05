@@ -1,0 +1,64 @@
+.gift {
+  margin: 0 auto;
+  margin-bottom: 5px;
+  padding: 0 20px;
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  width: 280px;
+  height: 289px;
+}
+
+.gift__term {
+  position: relative;
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  color: @bg-color;
+  padding: 0 40px;
+  padding-top: 190px;
+}
+
+.gift__term::before {
+  position: absolute;
+  content: "";
+  background-image: url("../img/icon-gift.svg");
+  width: 56px;
+  height: 61px;
+  left: 90px;
+  top: 65px;
+}
+
+
+@media (min-width: @tablets) {
+  .gift {
+    margin: 0 auto;
+    margin-bottom: 5px;
+    padding: 0 20px;
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+    width: 708px;
+    height: 200px;
+  }
+
+  .gift__term {
+    text-align: left;
+    position: relative;
+    font-family: "Arial", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #ffffff;
+    padding-top: 60px;
+    padding-left: 424px;
+    padding-right: 95px;
+  }
+}
+
+@media (min-width: @desktops) {
+  .gift {
+    margin: 0 auto;
+    margin-bottom: 5px;
+    padding: 0 20px;
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
+    width: 245px;
+    height: 289px;
+  }
+}
