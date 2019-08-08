@@ -4,54 +4,141 @@
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
     <header class="page-header">
-      <div class="wrapper">
+      <div class="page-header__wrapper">
       <div class="page-header__logo">
       <a href="#" class="page-header__link" >
         <picture>
-          <img class="logo__img" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип Кэт Энерджи">
           <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
           <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-        </picture>
+          <img class="logo__img" src="img/logo-mobile.svg" alt="Логотип Кэт Энерджи">
+            </picture>
       </a>
-      </div>
-        <nav class="main-nav">
-          <button class="main-nav__toggle main-nav--open" type="button">
-            <span class="visually-hidden">Открыть меню</span>
-          </button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--active">
-              <a class="site-list__link" href="index.html">Главная</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link" href="catalog.html">Каталог</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link" href="#">Подбор программы</a>
-            </li>
-            </ul>
-          </div>
-          </nav>
-          </div>
-        </header>
-    <main class="page-form">
+    </div>
+    <nav class="main-nav main-nav--closed main-nav--nojs">
+      <button class="main-nav__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+    <div class="main-nav__wrapper">
+      <ul class="main-nav__list site-list">
+        <li class="site-list__item ">
+          <a class="site-list__link" href="index.html">Главная</a>
+        </li>
+        <li class="site-list__item">
+          <a class="site-list__link" href="catalog.html">Каталог продукции</a>
+        </li>
+        <li class="site-list__item">
+          <a class="site-list__link site-list__item--active" href="#">Подбор программы</a>
+        </li>
+      </ul>
+    </div>
+    </nav>
+  </div>
+    </header>
 
-    </main>
+    <main class="page-form">
+      <div class="wrapper">
+      <h1 class="visually-hidden">Страница подбора программы и формы данных</h1>
+      <section class="form">
+      <div class="form__head">
+        <h2 class="form__heading">Подбор программы</h2>
+        <p class="form__slogan">Заполните анкету и мы подберем программу питания для вашего кота</p>
+        </div>
+            <form class="form__list" action="https://echo.htmlacademy.ru" method="post">
+              <fieldset class="form__set form__set--info">
+              <div class="form__wrapper">
+                <label class="form__lable" for="name">Имя:<sup>*</sup></label>
+                <input class="form__field form__field--name" type="text" id="name" name="name" placeholder="Барсик" required="">
+              </div>
+              <div>
+                <label class="form__lable" for="weight">Вес (кг):<sup>*</sup></label>
+                <input class="form__field form__field--weight" type="text" id="weight" name="weight" placeholder="7" pattern="[0-9]+" required="">
+              </div>
+              <div class="form__wrapper">
+                <label class="form__lable" for="age">Возраст (лет):</label>
+                <input class="form__field form__field--age" type="text" id="age" name="age" pattern="[0-9]+" placeholder="7">
+              </div>
+              </fieldset>
+              <fieldset class="form__set form__set--programm">
+              <div class="form__wrapper">
+                <input class="form__field form__field--radio" type="radio" id="weight-loss" name="form-choose" checked="">
+                <label class="form__lable" for="weight-loss">Похудение</label>
+              </div>
+              <div class="form__wrapper">
+                <input class="form__field form__field--radio" type="radio" id="weight-gain" name="form-choose">
+                <label class="form__lable" for="weight-gain">Набор массы</label>
+              </div>
+              <div class="form__wrapper">
+                <input class="form__field form__field--radio" type="radio" id="advice" name="form-choose">
+                <label class="form__lable" for="advice">Не знаю (Нужен ваш совет)</label>
+              </div>
+              </fieldset>
+              <fieldset class="form__set form__set--contacts">
+                <legend class="form__title">Контактные данные (владельца кота)</legend>
+                <div class="form__wrapper">
+                  <label class="form__lable" for="email">E-mail:<sup>*</sup></label>
+                  <input class="form__field form__field--mail" type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required="">
+                </div>
+                <div class="form__wrapper">
+                  <label class="form__lable" for="phone">Телефон:<sup>*</sup></label>
+                  <input class="form__field form__field--phone" type="tel" id="phone" name="phone" placeholder="8 (960) 900-60-90" required="">
+                </div>
+              </fieldset>
+              <fieldset class="form__set form__set--comments">
+                <legend class="form__title">Комментарий</legend>
+                <textarea class="form__field form__field--textarea" name="comment" id="comment" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+              </fieldset>
+              <fieldset class="form__set form__set--addition">
+                <legend class="form__title">Дополнительно</legend>
+                <div class="">
+                <div class="testik">
+                <input class="form__field form__field--checkbox" type="checkbox" id="sugar" name="sugar" checked="">
+                <label class="form__lable" for="sugar">Сахарозаменитель</label>
+                </div>
+                <div class="testik">
+                <input class="form__field form__field--checkbox" type="checkbox" id="water" name="water">
+                <label class="form__lable" for="water">Питьевая вода</label>
+                </div>
+                <div class="testik">
+                <input class="form__field form__field--checkbox" type="checkbox" id="milk" name="milk">
+                <label class="form__lable" for="milk">Молоко</label>
+                </div>
+                <div class="Max_idi_nahuy">
+                <input class="form__field form__field--checkbox" type="checkbox" id="vitamins" name="vitamins">
+                <label class="form__lable" for="vitamins">Витамины</label>
+                </div>
+                </div>
+              </fieldset>
+              <button class="form__order">Отправить заявку</button>
+              <p class="form__regulations">* — Обязательные поля</p>
+            </form>
+          </section>
+        </div>
+
+        <div class="partnership ">
+          <p class="partnership__offer">приглашаем к сотрудничеству дилеров!</p>
+            <span class="partnership__adress">ул. Большая <br> Конюшенная, д. 19/8 Санкт-Петербург</span>
+          </div>
+          <div class="map"></div>
+
+        </main>
+
     <footer class="page-footer">
-        <div class="wrapper">
-        <div class="page-footer__social social">
-            <a href="#" class="page-footer__logo">
-              <img class="logo__img" src="img/logo-footer.svg" width="128" height="24" alt="Логотип Кэт Энерджи">
-            </a>
-            <ul class="social__list">
-              <li class="social__item">
-                <a class="social__link social__link--vkontakte" href="#">
-                  <svg version="1.1" width="22" height="12" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                  viewBox="0 0 22 12" style="enable-background:new 0 0 22 12;" xml:space="preserve">
-              <path d="M17.6,12c-0.3,0-0.9-0.1-1.5-0.5c-0.5-0.3-0.9-0.7-1.3-1.2c-0.3-0.3-0.9-0.9-1.1-0.9c-0.2,0.1-0.4,0.7-0.3,1.2
+      <div class="page-footer__logo">
+          <a href="#" class="footer__logo">
+            <img class="logo__img" src="img/logo-footer.svg" width="128" height="24" alt="Логотип Кэт Энерджи">
+          </a>
+      </div>
+      <div class="page-footer__social social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--vkontakte" href="#">
+                <svg version="1.1" width="22" height="12" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 22 12" style="enable-background:new 0 0 22 12;" xml:space="preserve">
+                <path d="M17.6,12c-0.3,0-0.9-0.1-1.5-0.5c-0.5-0.3-0.9-0.7-1.3-1.2c-0.3-0.3-0.9-0.9-1.1-0.9c-0.2,0.1-0.4,0.7-0.3,1.2
                 c0,0.1,0,0.6-0.3,0.9c-0.3,0.3-0.8,0.4-0.9,0.4h-1.4c-0.7,0-3.2-0.2-5.4-2.3C2.5,7.1,0.2,2.2,0.1,2C0,1.6-0.1,1.2,0.2,0.9
                 s0.8-0.4,1-0.4h3.1c0.1,0,0.4,0.1,0.7,0.3C5.3,1,5.4,1.3,5.5,1.4c0.7,1.5,1.5,2.8,2.6,4C8.2,5,8.3,4,8.2,3.1c0-0.4-0.1-0.8-0.2-1
                 C7.9,2,7.7,1.9,7.5,1.9L6.9,1.4c0-0.5,0.5-0.9,0.9-1.1C8.3,0.1,9.1,0,10.1,0h0.5c0.9,0,1.2,0.1,1.6,0.1c1.2,0.3,1.2,1.3,1.1,2.5v1.6
@@ -65,20 +152,19 @@
                 C5,2.9,4.5,1.8,4.5,1.8s0-0.1-0.1-0.1S4.2,1.6,4.2,1.6H1.3H1.2c0.4,0.9,2.5,5,4.8,7.2c2,1.9,4.3,2,4.7,2h1.4c0,0,0.2,0,0.2-0.1v-0.1
                 c0-0.2,0-2,1.2-2.3C13.5,8.3,13.7,8.3,13.7,8.3z"/>
               </svg></a>
-              </li>
-              <li class="social__item">
-                <a class="social__link social__link--facebook" href="#">
-                    <svg version="1.1" height="23" width="23" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                    viewBox="0 0 16.1 16" style="enable-background:new 0 0 16.1 16;" xml:space="preserve">
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--facebook" href="#">
+                <svg version="1.1" height="23" width="23" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 16.1 16" style="enable-background:new 0 0 16.1 16;" xml:space="preserve">
                 <style type="text/css">
-                  .st0{fill:#231F20;}
+                .st0{fill:#231F20;}
                 </style>
                 <path class="st0" d="M11.8,1C13.6,1,15,2.4,15,4.2v7.7c0,1.7-1.4,3.1-3.1,3.1H4.2C2.4,15,1,13.6,1,11.8V4.2C1,2.4,2.4,1,4.2,1H11.8
-                    M11.8,0H4.2C1.9,0,0,1.9,0,4.2v7.7C0,14.1,1.9,16,4.2,16h7.7c2.3,0,4.2-1.9,4.2-4.2V4.2C16,1.9,14.1,0,11.8,0z"/>
+                M11.8,0H4.2C1.9,0,0,1.9,0,4.2v7.7C0,14.1,1.9,16,4.2,16h7.7c2.3,0,4.2-1.9,4.2-4.2V4.2C16,1.9,14.1,0,11.8,0z"/>
                 <path class="st0" d="M8,4.9c1.7,0,3.1,1.4,3.1,3.1S9.7,11.1,8,11.1S4.9,9.7,4.9,8S6.3,4.9,8,4.9 M8,3.9C5.7,3.9,3.9,5.7,3.9,8
-                  s1.8,4.1,4.1,4.1s4.1-1.8,4.1-4.1S10.3,3.9,8,3.9z"/>
+                s1.8,4.1,4.1,4.1s4.1-1.8,4.1-4.1S10.3,3.9,8,3.9z"/>
                 <circle class="st0" cx="12.3" cy="3.7" r="0.9"/>
-                </svg>
               </svg></a>
               </li>
               <li class="social__item">
@@ -99,7 +185,8 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="48" viewBox="0 0 60 60"><path fill="#2E368F" d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/></svg>
               </a>
             </div>
-            </div>
           </footer>
+
+          <script src="js/script.js"></script>
       </body>
     </html>

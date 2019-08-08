@@ -38,6 +38,14 @@
   color: #ffffff;
   text-decoration: none;
   background-color: @green-color;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 .meal__programm {
@@ -217,6 +225,64 @@
 }
 
 
-// @media (min-width: @desktops) {
+@media (min-width: @desktops) {
+  .meal__programm {
+    display: flex;
+    justify-content: space-around;
+  }
 
-// }
+  .meal__background {
+    background: none;
+    height: 500px;
+    margin-bottom: 150px;
+  }
+
+  .programm__description {
+    width: 482px;
+  }
+
+  .programm__tittle {
+    padding-left: 180px;
+    margin-bottom: 70px;
+  }
+
+  .programm__background {
+    position: absolute;
+    top: -20px;
+    left: 25px;
+    width: 100px;
+    height: 100px;
+    background-color: #68b738;
+    border-radius: 100px;
+  }
+
+  .programm__item {
+    margin-left: 50px;
+    width: 570px;
+  }
+
+  .programm__item:nth-child(2) {
+    margin-left: 50px;
+    width: 570px;
+  }
+
+  .programm__tittle--diet::before {
+    content: "";
+    position: absolute;
+    width: 71px;
+    height: 97px;
+    background: url("../img/icon-cat-slim.svg") no-repeat center;
+    left: 40px;
+    top: -30px;
+  }
+
+  .programm__tittle--weight::before {
+    content: "";
+    position: absolute;
+    width: 134px;
+    height: 57px;
+    background: url("../img/icon-cat-pro.svg") no-repeat center;
+    left: 10px;
+    top: 0;
+  }
+}

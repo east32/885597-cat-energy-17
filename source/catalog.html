@@ -18,25 +18,25 @@
             </picture>
       </a>
     </div>
-      <nav class="main-nav">
-        <button class="main-nav__toggle main-nav__toggle--open main-nav__toggle--nojs" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--active">
-            <a class="site-list__link link__catalog" href="index.html">Главная</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link link__catalog" href="#">Каталог продукции</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link link__catalog" href="form.html">Подбор программы</a>
-          </li>
-        </ul>
-      </div>
-      </nav>
+    <nav class="main-nav main-nav--closed main-nav--nojs">
+      <button class="main-nav__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+    <div class="main-nav__wrapper">
+      <ul class="main-nav__list site-list">
+        <li class="site-list__item site-list__item--active">
+          <a class="site-list__link link__catalog" href="index.html">Главная</a>
+        </li>
+        <li class="site-list__item">
+          <a class="site-list__link link__catalog--active" href="#">Каталог продукции</a>
+        </li>
+        <li class="site-list__item">
+          <a class="site-list__link link__catalog" href="form.html">Подбор программы</a>
+        </li>
+      </ul>
     </div>
+    </nav>
+  </div>
     </header>
 
     <main class="page-catalog">
@@ -191,7 +191,7 @@
                       <picture>
                         <source media="(min-width: 1300px)" srcset="img/buckwheat-big-desktop@1x.png">
                         <source media="(min-width: 768px)" srcset="img/buckwheat-big-tablet@1x.png">
-                        <img src="buckwheat-big-mobile@1x.jpg" alt="Большая банка корма с гречкой">
+                        <img src="img/buckwheat-big-mobile@1x.jpg" alt="Большая банка корма с гречкой">
                       </picture>
                     </div>
                     <div class="item-container">
@@ -304,15 +304,12 @@
           <p class="gift__term">Закажите все и получите чехол для кота в подарок!</p>
         </div>
       </section>
-
-      <div class="partnership">
+    </div>
+    <div class="partnership">
         <p class="partnership__offer">приглашаем к сотрудничеству дилеров!</p>
           <span class="partnership__adress">ул. Большая <br> Конюшенная, д. 19/8 Санкт-Петербург</span>
         </div>
-        <div class="map">
-          <!--   -->
-        </div>
-      </div>
+        <div class="map"></div>
     </main>
 
     <footer class="page-footer">
@@ -375,6 +372,8 @@
               </a>
             </div>
           </footer>
+
+          <script src="js/script.js"></script>
     </body>
 
   </html>
