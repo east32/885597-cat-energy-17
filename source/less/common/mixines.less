@@ -1,0 +1,59 @@
+.list() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.link() {
+  text-decoration: none;
+}
+
+.wrapper() {
+  width: 320px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.wrapper-tablet() {
+  width: 768px;
+  padding: 0 30px;
+}
+
+.wrapper-desktop() {
+  width: 1440px;
+  padding: 0 110px;
+}
+
+.visually-hidden() {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+@tablets: 768px;
+
+@media (min-width: @tablets) {
+  width: 768px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin: 0 auto;
+}
+
+@desktops: 1300px;
+
+@media (min-width: @desktops) {
+  width: 1440px;
+  padding-right: 110px;
+  padding-left: 110px;
+}
+
+@mobile:width767px;
+
+@media (max-width: @mobile) {
+  width: 767px;
+}
