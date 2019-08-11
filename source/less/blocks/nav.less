@@ -198,7 +198,8 @@
     color: @bg-color;
   }
 
-  .link__catalog {
+  .link__catalog,
+  .link__form {
     .link();
     font-size: 20px;
     line-height: 1.25;
@@ -229,5 +230,10 @@
     width: 1440px;
     margin: 0 auto;
     background: url("../img/index-can-desktop@1x.png") no-repeat 63% 100px, url("../img/index-background-desktop@1x.jpg") no-repeat 100% 0;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background: url("../img/index-can-desktop@2x.png") no-repeat 63% 100px, url("../img/index-background-desktop@2x.jpg") no-repeat 100% 0;
+      background-size: 720px auto;
+    }
   }
 }

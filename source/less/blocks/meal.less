@@ -5,7 +5,13 @@
   height: 455px;
   background: url("../img/index-can-mobile@1x.png") no-repeat 50% 90%,
     url("../img/index-background-mobile@1x.jpg") no-repeat;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background: url("../img/index-can-mobile@2x.png") no-repeat 50% 90%, url("../img/index-background-mobile@2x.jpg") no-repeat;
+    background-size: 320px auto;
+  }
 }
+
 
 .meal__header {
   padding-top: 27px;
@@ -78,12 +84,43 @@
 }
 
 .programm__catalog {
+  position: relative;
   text-decoration: none;
   font-size: 16px;
   font-weight: 400;
   text-transform: uppercase;
   color: @font-color;
   padding-left: 20px;
+}
+
+.programm__arrow {
+  left: 111px;
+  top: 0;
+  width: 15px;
+  height: 2px;
+  margin: 10px 0;
+  background: #222222;
+  position: absolute;
+}
+
+.programm__arrow::after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: -4px;
+  left: 15px;
+  border-width: 5px 0 5px 10px;
+  border-style: solid;
+  border-color: transparent #000000;
+}
+
+.programm__arrow:hover {
+  width: 25px;
+}
+
+.programm__arrow:hover::after {
+  left: 25px;
 }
 
 .programm__background {
@@ -121,6 +158,11 @@
     width: 709px;
     height: 829px;
     background: url("../img/index-can-tablet@1x.jpg") no-repeat 10px 225px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background: url("../img/index-can-tablet@2x.jpg") no-repeat 10px 225px;
+      background-size: 709px auto;
+    }
   }
 
   .meal__header {
