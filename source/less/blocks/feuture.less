@@ -1,18 +1,35 @@
 .additional__goods {
-  padding: 0 20px;
+  margin-top: 0px;
+  position: relative;
   font-size: 24px;
   font-weight: 400;
   text-align: left;
   color: @font-color;
 }
 
+.additional__goods::after {
+  top: 13px;
+  content: "";
+  position: absolute;
+  width: 53px;
+  height: 3px;
+  background-color: #68b738;
+  right: -20px;
+}
 
 .additional__list {
   .list();
 }
 
+.additional-product__name,
+.additional-product__value {
+  font-family: "Arial";
+  font-size: 14px;
+}
+
 .additional-product__item {
   border-top: 1px solid #e6e6e6;
+  margin-bottom: 5px;
 }
 
 .additional-product__item:last-child {
@@ -28,7 +45,7 @@
 }
 
 .additional-product__heading {
-  margin-bottom: 6px;
+  margin-bottom: 0;
   margin-top: 21px;
   font-size: 16px;
   font-weight: 400;
@@ -39,10 +56,31 @@
 
 @media (min-width: @tablets) {
   .additional__goods {
+    padding: 0 20px;
     font-size: 36px;
     font-weight: 400;
     text-align: left;
     color: #111111;
+  }
+
+  .additional__goods::after {
+    top: 13px;
+    content: "";
+    position: absolute;
+    width: 340px;
+    height: 3px;
+    background-color: #68b738;
+    right: -30px;
+   }
+
+  .additional__goods::before {
+    left:-30px;
+    top: 13px;
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: #68b738;
   }
 
   .additional-product__item {
@@ -80,6 +118,26 @@
   .additional {
     display: flex;
   }
+
+  .additional__goods::before {
+    left: -110px;
+    top: 13px;
+    content: "";
+    position: absolute;
+    width: 110px;
+    height: 3px;
+    background-color: #68b738;
+}
+
+.additional__goods::after {
+  top: 13px;
+  content: "";
+  position: absolute;
+  width: 950px;
+  height: 3px;
+  background-color: #68b738;
+  right: -360px;
+}
 
   .additional-product__list {
     border: none;

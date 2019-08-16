@@ -4,9 +4,11 @@
 }
 
 .catalog-product__heading {
-  font-size: 36px;
-  font-weight: 400;
-  color: #111111;
+    margin-top: 40px;
+    font-size: 36px;
+    font-weight: 400;
+    color: #111111;
+    margin-left: -15px;
 }
 
 .catalog-product__list {
@@ -35,6 +37,10 @@
 
 .item__container {
   width: 50%;
+}
+
+.item__more {
+  margin-bottom: 0;
 }
 
 .item-container__heading {
@@ -70,13 +76,22 @@
   background-color: @green-color;
   margin: 0 auto;
   line-height: 40px;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
+
 
 .additional__describing {
   margin-bottom: 1px;
-  padding-right: 27px;
-  padding-left: 48px;
-  padding-top: 77px;
+  padding-right: 30px;
+  padding-left: 40px;
+  padding-top: 64px;
   position: relative;
   font-size: 16px;
   font-weight: 400;
@@ -99,8 +114,8 @@
   background: url("../img/icon-plus.svg") no-repeat center;
   width: 31px;
   height: 31px;
-  left: 135px;
-  top: 25px;
+  left: 126px;
+  top: 11px;
 }
 
 .additional__slogan {
@@ -126,6 +141,15 @@
   line-height: 40px;
   text-align: center;
   color: #444444;
+
+  &:hover {
+    background-color: #ebebeb;
+  }
+
+  &:active {
+    background-color: #ebebeb;
+    color: rgba(68, 68, 68, 0.3);
+  }
 }
 
 
@@ -200,7 +224,16 @@
 }
 
 @media (min-width: @desktops) {
+  .catalog-product__heading {
+    margin-top: 85px;
+  }
+
+  .catalog-product__name {
+    margin-bottom: 105px;
+}
+
   .item-container__heading {
+    margin-bottom: 20px;
     width: 100%;
     font-size: 20px;
     padding: 0 51px;
@@ -220,6 +253,32 @@
     align-items: center;
   }
 
+  .product-list__item:first-child {
+    margin-right: 5px
+  }
+
+  .product-list__item:nth-child(5),
+  .product-list__item:nth-child(6),
+  .product-list__item:nth-child(7) {
+    margin-top: 80px;
+  }
+
+  .product-list__item:nth-child(6) {
+    margin-left: 6px;
+  }
+
+  .product-list__image {
+    margin-bottom: 25px;
+  }
+
+  .image__tablet {
+    margin-bottom: 25px;
+  }
+
+  .item-container {
+    margin-bottom: 25px;
+  }
+
   .item-order {
     font-size: 16px;
     text-transform: uppercase;
@@ -231,19 +290,11 @@
     background-color: @green-color;
     margin: 0 auto;
     line-height: 40px;
-
-    &:hover {
-      background-color: #5eaa2f;
-    }
-
-    &:active {
-      color: rgba(255, 255, 255, 0.3);
-    }
   }
 
   .properties__describing {
     padding-bottom: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     width: 170px;
     font-family: "Arial", sans-serif;
     font-weight: 400;

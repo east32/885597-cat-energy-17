@@ -91,13 +91,17 @@
   text-transform: uppercase;
   color: @font-color;
   padding-left: 20px;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .programm__arrow {
-  left: 111px;
+  left: 119px;
   top: 0;
   width: 15px;
-  height: 2px;
+  height: 4px;
   margin: 10px 0;
   background: #222222;
   position: absolute;
@@ -108,18 +112,20 @@
   width: 0;
   height: 0;
   position: absolute;
-  top: -4px;
+  top: -3px;
   left: 15px;
   border-width: 5px 0 5px 10px;
   border-style: solid;
   border-color: transparent #000000;
 }
 
-.programm__arrow:hover {
+.programm__arrow:hover,
+.programm__arrow:active {
   width: 25px;
 }
 
-.programm__arrow:hover::after {
+.programm__arrow:hover::after,
+.programm__arrow:active::after {
   left: 25px;
 }
 
@@ -155,6 +161,7 @@
 
 @media (min-width: @tablets) {
   .meal__background {
+    margin-bottom: 85px;
     width: 709px;
     height: 829px;
     background: url("../img/index-can-tablet@1x.jpg") no-repeat 10px 225px;
@@ -207,13 +214,13 @@
     text-transform: uppercase;
     color: @font-color;
     margin-top: 7px;
-    margin-bottom: 36px;
+    margin-bottom: 25px;
   }
 
   .programm__background {
     position: absolute;
-    top: 45px;
-    left: 450px;
+    top: 15px;
+    left: 435px;
     width: 200px;
     height: 200px;
     background-color: @green-color;
@@ -229,6 +236,12 @@
     font-size: 16px;
     line-height: 1.5;
     color: @add-font-color;
+    margin-bottom: 27px
+  }
+
+  .programm__description--weight {
+    margin-bottom: 35px;
+    width: 385px
   }
 
   .programm__item {
@@ -236,7 +249,7 @@
   }
 
   .programm__item:first-child {
-    margin-bottom: 155px;
+    margin-bottom: 160px;
   }
 
   .programm__tittle--diet::before {
@@ -245,8 +258,8 @@
     width: 141px;
     height: 194px;
     background: url("../img/icon-cat-slim.svg") no-repeat center;
-    left: 480px;
-    top: 33px;
+    left: 463px;
+    top: 3px;
   }
 
   .programm__tittle--weight::before {
@@ -255,8 +268,8 @@
     width: 268px;
     height: 113px;
     background: url("../img/icon-cat-pro.svg") no-repeat center;
-    left: 410px;
-    top: 80px;
+    left: 400px;
+    top: 60px;
   }
 
   .programm__catalog {
@@ -267,6 +280,20 @@
     color: @font-color;
     padding-left: 42px;
   }
+
+  .programm__arrow {
+    left: 160px;
+    top: 3px;
+  }
+
+.meal {
+    margin-bottom: 65px;
+}
+
+.item__describe:nth-child(2) {
+    margin-left: 20px;
+}
+
 }
 
 
@@ -284,6 +311,10 @@
 
   .programm__description {
     width: 482px;
+
+    &--weight {
+      margin-bottom: 38px;
+    }
   }
 
   .programm__tittle {

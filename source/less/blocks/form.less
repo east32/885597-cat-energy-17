@@ -29,6 +29,15 @@
   border: solid 1px rgba(205, 205, 205, 0.5);
   margin-bottom: 15px;
 
+  &:hover {
+    border: solid 1px rgba(205, 205, 205, 1);
+  }
+
+  &:active {
+    border: solid 2px #444444;
+  }
+
+
   &--name {
     width: 229px;
     height: 41px;
@@ -87,6 +96,14 @@
   background-color: @green-color;
   margin: 0 auto;
   line-height: 40px;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 .form__field--checkbox + label {
@@ -173,7 +190,15 @@
   text-align: center;
 }
 
+.form__lable {
+  text-transform: uppercase;
+}
+
 @media (min-width: @tablets) {
+  .form__lable {
+    font-size: 20px;
+  }
+
   .form__heading {
     font-size: 60px;
     font-weight: 400;
@@ -314,6 +339,7 @@
     height: 40px;
     border: 1px solid #cdcdcd;
     left: 0;
+    top: -7px;
   }
 
   .form__field--checkbox:checked + label::before {
@@ -323,6 +349,7 @@
     width: 22px;
     height: 17px;
     left: 0;
+    top: -7px;
     background-image: url("../img/icon-tick.svg");
     background-repeat: no-repeat;
     background-position: 8px 9px;
@@ -379,25 +406,30 @@
     }
 
     &--weight {
-      width: 498px;
+      width: 490px;
       height: 51px;
     }
 
     &--age {
-      width: 467px;
+      width: 447px;
       height: 51px;
     }
 
     &--mail {
-      width: 500px;
+      width: 485px;
       height: 51px;
       margin-right: 53px;
     }
 
     &--phone {
-      width: 500px;
+      width: 485px;
       height: 51px;
     }
+  }
+
+  .form__field--checkbox:checked + label::before {
+    content: "";
+    padding: 19px 19px;
   }
 
   .form__set {

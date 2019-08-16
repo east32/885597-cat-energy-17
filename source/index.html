@@ -25,8 +25,8 @@
         </button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item-">
-            <a class="site-list__link" href="#">Главная</a>
+          <li class="site-list__item" >
+            <a class="site-list__link site-list__link--active" href="#">Главная</a>
           </li>
           <li class="site-list__item">
             <a class="site-list__link" href="catalog.html">Каталог продукции</a>
@@ -54,13 +54,13 @@
           <li class="programm__item ">
             <div class="programm__background"></div>
             <h3 class="programm__tittle programm__tittle--diet">Похудение</h3>
-            <p class="programm__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
+            <p class="programm__description programm__description--diet">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
             <a class="programm__catalog" href="#"><span class="programm__arrow"></span>Каталог Slim</a>
           </li>
           <li class="programm__item">
             <div class="programm__background"></div>
             <h3 class="programm__tittle programm__tittle--weight">Набор массы</h3>
-            <p class="programm__description">Заработать авторитет среди  дворовых котов и даже собак? Серия Cat Energy Pro поможет  вашему коту нарастить необходимые мышцы!</p>
+            <p class="programm__description programm__description--weight">Заработать авторитет среди  дворовых котов и даже собак? Серия Cat Energy Pro поможет  вашему коту нарастить необходимые мышцы!</p>
             <a class="programm__catalog" href="#"><span class="programm__arrow"></span>Каталог Pro</a>
           </li>
         </ul>
@@ -96,13 +96,13 @@
         <ul class="changes__list results">
           <li class="results__list">
               <fieldset class="results__field">
-                <p class="results__value">5 КГ</p>
+                <p class="results__value results__value--weight">5 КГ</p>
                 <legend align="center"  class="results__describe">снижение веса</legend>
                 </fieldset>
           </li>
           <li class="results__list">
               <fieldset class="results__field">
-                <p class="results__value">60 дней</p>
+                <p class="results__value results__value--days">60 дней</p>
                 <legend align="center"  class="results__describe">затрачено времени</legend>
                 </fieldset>
           </li>
@@ -175,10 +175,9 @@
             </li>
             <li class="social__item">
               <a class="social__link social__link--facebook" href="#">
-                <svg version="1.1" height="23" width="23" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                <svg version="1.1" height="17" width="17" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 viewBox="0 0 16.1 16" style="enable-background:new 0 0 16.1 16;" xml:space="preserve">
                 <style type="text/css">
-                .st0{fill:#231F20;}
                 </style>
                 <path class="st0" d="M11.8,1C13.6,1,15,2.4,15,4.2v7.7c0,1.7-1.4,3.1-3.1,3.1H4.2C2.4,15,1,13.6,1,11.8V4.2C1,2.4,2.4,1,4.2,1H11.8
                 M11.8,0H4.2C1.9,0,0,1.9,0,4.2v7.7C0,14.1,1.9,16,4.2,16h7.7c2.3,0,4.2-1.9,4.2-4.2V4.2C16,1.9,14.1,0,11.8,0z"/>
@@ -200,9 +199,9 @@
             </ul>
           </div>
           <div class="page-footer__copyright copyright">
-              <p class="copyright__text">HTML Academy</p>
+              <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__text">HTML Academy</p>
               <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="48" viewBox="0 0 60 60"><path fill="#2E368F" d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="48" viewBox="0 0 60 60"><path  d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/></svg>
               </a>
             </div>
           </footer>
