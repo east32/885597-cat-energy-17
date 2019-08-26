@@ -93,6 +93,10 @@
   margin-bottom: 27px;
 }
 
+.item__describe br {
+  display: none;
+}
+
 @media (min-width: @tablets) {
   .describing__head {
     margin-left: -10px;
@@ -134,7 +138,7 @@
   }
 
   .item__describe br {
-    display: none;
+    display: block;
   }
 
   .list__item::before {
@@ -165,9 +169,19 @@
 }
 
 @media (min-width: @desktops) {
+  .describing__head {
+    margin-left: 0;
+  }
+
   .describing__list {
     .list();
     display: flex;
     flex-wrap: nowrap;
+    width: 1300px;
+    margin-left: 10px;
+  }
+
+  .list__item:first-child {
+    margin-bottom: 0;
   }
 }

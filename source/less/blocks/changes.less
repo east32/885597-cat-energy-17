@@ -10,6 +10,7 @@
 }
 
 .changes__info {
+  width: 275px;
   margin-bottom: 28px;
   font-family: "Arial", sans-serif;
   line-height: 1.29;
@@ -21,23 +22,27 @@
   display: flex;
 }
 
+.changes__money {
+  display: flex;
+  justify-content: center;
+}
+
+.results__list {
+  margin-right: 25px;
+}
+
 .results__value {
   margin: 0;
-  padding-right: 9px;
-  padding-left: 9px;
   text-transform: uppercase;
   text-align: center;
   font-size: 24px;
   font-weight: 400;
   color: #111111;
+}
 
-  &--weight {
-    width: 155px;
-  }
-
-  &--days {
-    width: 155px;
-  }
+.changes__price {
+  margin-top: 19px;
+  text-transform: uppercase;
 }
 
 .changes__value {
@@ -72,6 +77,13 @@
   width: 320px;
 }
 
+.slider__item--before {
+  background-image: url("../img/before-mobile@1x.png");
+  width: 311px;
+  height: 232px;
+  background-repeat: no-repeat;
+}
+
 .slider-change {
   .list();
   position: relative;
@@ -80,6 +92,7 @@
   width: 315px;
   margin-left: -5px;
 }
+
 
 .slider__scale {
   position: relative;
@@ -104,6 +117,14 @@
   border-radius: 3px;
   background-color: #68b738;
   z-index: 2;
+
+  &:hover {
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  &:active {
+    box-shadow: 0 0 2px 2px #68b738;
+  }
 }
 
 .slider-change__describe {
@@ -116,7 +137,7 @@
 .slider__list {
   .list();
   display: flex;
-  margin-bottom: 12px;
+  margin-bottom: 19px;
 }
 
 .slider-change__list {
@@ -137,8 +158,8 @@
   }
 
   .changes__info {
+    width: 100%;
     padding-left: 30px;
-    padding-right: 40px;
     margin-left: -40px;
     font-size: 16px;
     margin-bottom: 55px;
@@ -160,6 +181,14 @@
     font-size: 30px;
     font-weight: 400;
     color: #111111;
+
+    &--weight {
+      width: 155px;
+    }
+
+    &--days {
+      width: 155px;
+    }
   }
 
   .results__field {
@@ -175,12 +204,8 @@
     line-height: 1;
   }
 
-  .results__list {
-    width: 50%;
-  }
-
   .results__list:last-child {
-    margin-left: 43px;
+    margin-left: 15px;
   }
 
   .changes__wrapper {
@@ -194,6 +219,50 @@
     text-transform: uppercase;
     margin: 0;
     margin-top: 10px;
+    margin-bottom: -6px;
+  }
+
+  .changes__price {
+    text-align: right;
+    font-size: 20px;
+    margin-top: 11px;
+    text-transform: uppercase;
+  }
+
+  .slider-change__describe {
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+
+  .slider-change__list {
+    border-bottom: 1px dotted #eaeaea;
+
+    &:hover {
+      border-bottom: 1px solid #000000;
+    }
+
+    &:active {
+      border: none;
+    }
+  }
+
+  .slider__item--before {
+    background-image: url("../img/before-tablet@1x.png");
+    width: 336px;
+    height: 499px;
+    background-repeat: no-repeat;
+  }
+
+  .slider__item--after {
+    background-image: url("../img/after-tablet@1x.png");
+    width: 298px;
+    height: 499px;
+    background-repeat: no-repeat;
+  }
+
+  .changes__money {
+    display: flex;
+    flex-direction: column;
   }
 
   .changes__describe {
@@ -201,7 +270,7 @@
   }
 
   .changes__list {
-    margin-right: 160px;
+    margin-right: 133px;
   }
 
   .slider {
@@ -216,8 +285,8 @@
   }
 
   .slider-change {
-    margin-left: 60px;
-    width: 550px;
+    margin-left: 40px;
+    width: 583px;
     padding: 0;
     list-style: none;
     position: relative;
@@ -229,7 +298,7 @@
   .slider__bar {
     position: absolute;
     top: 10px;
-    left: 120px;
+    left: 128px;
     width: 428px;
     height: 6px;
     border-radius: 2.5px;
@@ -239,7 +308,7 @@
 
   .slider__toggle {
     position: absolute;
-    left: 306px;
+    left: 320px;
     top: -2px;
     box-sizing: content-box;
     width: 8px;
@@ -256,6 +325,31 @@
 }
 
 @media (min-width: @desktops) {
+  .changes {
+    padding-top: 5px;
+  }
+
+  .changes__head {
+    margin-left: 0;
+    margin-bottom: 163px;
+  }
+
+  .changes__info {
+    padding-left: 5px;
+    padding-right: 161px;
+    margin-left: 0;
+    font-size: 16px;
+    margin-bottom: 70px;
+    font-family: "Arial", sans-serif;
+    line-height: 1.5;
+    color: #444444;
+  }
+
+  .changes__list {
+    margin-left: 15px;
+    margin-bottom: 30px;
+  }
+
   .changes__example {
     display: flex;
   }
@@ -267,6 +361,35 @@
 
   .changes__value {
     text-align: left;
-    width: 300px;
+    width: 240px;
+  }
+
+  .changes__money {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .slider {
+    margin-top: -23px;
+  }
+
+  .slider__list {
+    margin-bottom: 27px;
+  }
+
+  .slider__item--before {
+    background-image: url("../img/before-desktop@1x.png");
+    width: 365px;
+    height: 499px;
+    background-repeat: no-repeat;
+    margin-left: -25px;
+  }
+
+  .slider__item--after {
+    background-image: url("../img/after-desktop@1x.png");
+    width: 271px;
+    height: 499px;
+    background-repeat: no-repeat;
   }
 }

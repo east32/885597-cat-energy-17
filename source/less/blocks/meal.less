@@ -12,7 +12,6 @@
   }
 }
 
-
 .meal__header {
   padding-top: 27px;
   width: 250px;
@@ -94,39 +93,37 @@
 
   &:active {
     opacity: 0.3;
+    display: inline-block;
+    width: 150px;
+    background-image: url("../img/icon-right-arrow-verylong.svg");
+    background-repeat: no-repeat;
+    background-size: 28px 28px;
+    background-position: 115px -2px;
+  }
+
+  &:hover {
+    display: inline-block;
+    width: 150px;
+    background-image: url("../img/icon-right-arrow-verylong.svg");
+    background-repeat: no-repeat;
+    background-size: 28px 28px;
+    background-position: 115px -2px;
   }
 }
 
-.programm__arrow {
-  left: 119px;
-  top: 0;
-  width: 15px;
-  height: 4px;
-  margin: 10px 0;
-  background: #222222;
-  position: absolute;
-}
-
-.programm__arrow::after {
+.programm__catalog::before {
   content: "";
-  width: 0;
-  height: 0;
   position: absolute;
-  top: -3px;
-  left: 15px;
-  border-width: 5px 0 5px 10px;
-  border-style: solid;
-  border-color: transparent #000000;
+  background: url("../img/icon-right-arrow-long.svg") no-repeat;
+  width: 55px;
+  height: 10px;
+  left: 115px;
+  top: 6px;
+  fill: #000000;
 }
 
-.programm__arrow:hover,
-.programm__arrow:active {
-  width: 25px;
-}
-
-.programm__arrow:hover::after,
-.programm__arrow:active::after {
-  left: 25px;
+.programm__catalog:hover::before {
+  background: none;
 }
 
 .programm__background {
@@ -205,6 +202,30 @@
     background-color: @green-color;
   }
 
+  .programm__catalog {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: @font-color;
+    padding-left: 42px;
+
+    &:hover {
+      width: 250px;
+      background-position: 155px -3px;
+    }
+
+    &:active {
+      width: 250px;
+      background-position: 155px -3px;
+    }
+
+    &::before {
+      left: 155px;
+      top: 9px;
+    }
+  }
+
   .programm__tittle {
     padding-left: 44px;
     position: relative;
@@ -272,15 +293,6 @@
     top: 60px;
   }
 
-  .programm__catalog {
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: 400;
-    text-transform: uppercase;
-    color: @font-color;
-    padding-left: 42px;
-  }
-
   .programm__arrow {
     left: 160px;
     top: 3px;
@@ -297,6 +309,24 @@
 
 
 @media (min-width: @desktops) {
+  .meal {
+    margin-bottom: 0;
+  }
+
+  .meal__header {
+    margin-top: 78px;
+    margin-left: 101px;
+  }
+
+  .meal__slogan {
+    margin-left: 100px;
+    padding-bottom: 34px;
+  }
+
+  .meal__pick {
+    margin-left: 101px;
+  }
+
   .meal__programm {
     display: flex;
     justify-content: space-around;
@@ -308,23 +338,45 @@
     margin-bottom: 150px;
   }
 
-  .programm__description {
-    width: 482px;
+  .programm__catalog {
+    padding-left: 12px;
 
-    &--weight {
-      margin-bottom: 38px;
+    &::before {
+      left: 125px;
+      top: 9px;
+    }
+
+    &:hover {
+      width: 250px;
+      background-position: 125px -3px;
+    }
+
+    &:active {
+      width: 250px;
+      background-position: 125px -3px;
     }
   }
 
+  .programm__description {
+    padding-left: 12px;
+    margin-bottom: 5px;
+    width: 482px;
+  }
+
   .programm__tittle {
-    padding-left: 180px;
+    padding-left: 175px;
     margin-bottom: 70px;
+  }
+
+  .programm__item:first-child {
+    margin-left: 80px;
+    margin-bottom: 90px;
   }
 
   .programm__background {
     position: absolute;
-    top: -20px;
-    left: 25px;
+    top: -25px;
+    left: 13px;
     width: 100px;
     height: 100px;
     background-color: #68b738;
@@ -337,7 +389,7 @@
   }
 
   .programm__item:nth-child(2) {
-    margin-left: 50px;
+    margin-left: 82px;
     width: 570px;
   }
 
@@ -347,8 +399,8 @@
     width: 71px;
     height: 97px;
     background: url("../img/icon-cat-slim.svg") no-repeat center;
-    left: 40px;
-    top: -30px;
+    left: 27px;
+    top: -35px;
   }
 
   .programm__tittle--weight::before {
@@ -357,7 +409,7 @@
     width: 134px;
     height: 57px;
     background: url("../img/icon-cat-pro.svg") no-repeat center;
-    left: 10px;
-    top: 0;
+    left: -3px;
+    top: -10px;
   }
 }

@@ -5,8 +5,9 @@
 }
 
 .partnership__offer {
-  width: 250px;
+  width: 265px;
   margin: 0;
+  margin-right: 15px;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.25;
@@ -14,8 +15,22 @@
   color: @font-color;
 }
 
+.partnership__container {
+  width: 300px;
+  margin-top: -3px;
+  display: flex;
+  flex-direction: column;
+}
+
 .partnership__adress {
-  width: 250px;
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 1.43;
+  font-weight: 400;
+  color: @add-font-color;
+}
+
+.partnership__city {
   font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 1.43;
@@ -25,23 +40,34 @@
 
 @media (min-width: @tablets) {
   .partnership {
-    width: 768px;
+    width: 708px;
     display: flex;
-    justify-content: space-between;
-    margin-top: 61px;
+    margin-top: 137px;
+    margin-bottom: 52px;
   }
 
   .partnership__offer {
-    width: 154px;
+    padding-left: 15px;
     margin: 0;
+    margin-left: 80px;
     font-size: 20px;
     font-weight: 400;
     line-height: 1.25;
     text-transform: uppercase;
-    color: @font-color;
+    color: #111111;
+  }
+
+  .partnership__container {
+    width: 240px;
+    margin-top: -3px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 270px;
   }
 
   .partnership__adress {
+    margin-bottom: 20px;
     padding: 0;
     text-align: right;
     width: 160px;
@@ -51,12 +77,21 @@
     font-weight: 400;
     color: @add-font-color;
   }
+
+  .partnership__city {
+    font-family: "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 1.43;
+    font-weight: 400;
+    color: #444444;
+    text-align: center;
+  }
 }
 
 @media (min-width: @desktops) {
   .partnership {
-    margin-top: 115px;
-    margin-left: 330px;
+    margin-top: 82px;
+    margin-left: 340px;
     padding: 0 75px;
     align-items: center;
     background-color: #ffffff;
@@ -68,5 +103,40 @@
     &--index {
       margin-left: 110px;
     }
+  }
+
+  .partnership__offer {
+    padding-left: 0;
+  }
+
+  .partnership__container {
+    width: 240px;
+    margin-top: -3px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+  }
+
+  .partnership__adress {
+    margin-left: 35px;
+    margin-bottom: 20px;
+    padding: 0;
+    text-align: left;
+    width: 160px;
+    font-family: "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 1.25;
+    font-weight: 400;
+    color: #444444;
+  }
+
+  .partnership__city {
+    width: 160px;
+    font-family: "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 1.43;
+    font-weight: 400;
+    color: #444444;
+    text-align: right;
   }
 }
