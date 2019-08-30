@@ -29,7 +29,7 @@
 
 .additional-product__item {
   border-top: 1px solid #e6e6e6;
-  margin-left: 10px;
+  margin-bottom: 4px;
 }
 
 .additional-product__item:last-child {
@@ -41,12 +41,12 @@
   .list();
   display: flex;
   justify-content: space-between;
-  margin-bottom: 14px;
+  margin-bottom: 9px;
 }
 
 .additional-product__heading {
-  margin-bottom: 0;
-  margin-top: 21px;
+  margin-bottom: 4px;
+  margin-top: 23px;
   font-size: 16px;
   font-weight: 400;
   text-align: left;
@@ -57,7 +57,7 @@
 @media (min-width: @tablets) {
   .additional__goods {
     margin-left: 5px;
-    margin-bottom: 110px;
+    margin-bottom: 85px;
     margin-top: 10px;
     padding: 0 20px;
     font-size: 36px;
@@ -90,13 +90,18 @@
     margin-bottom: 49px;
   }
 
+  .additional-product__item:first-child {
+    border-top: none;
+  }
+
   .additional-product__list {
+    padding-top: 25px;
     border: 1px solid #e6e6e6;
   }
 
   .additional-product__heading {
     font-size: 20px;
-    padding: 0 20px;
+    padding: 0 30px;
     margin: 0;
   }
 
@@ -108,14 +113,30 @@
   .product-list__order {
     width: 635px;
     font-size: 16px;
-    margin-left: 15px;
+    margin-left: 25px;
   }
 
   .additional-product__feuture {
     margin-right: 45px;
     font-size: 16px;
-    width: 230px;
+    width: 227px;
     margin-bottom: 0;
+
+    &--water {
+      width: 160px;
+    }
+
+    &--milk {
+      width: 142px;
+    }
+
+    &--vitamins {
+      width: 217px;
+    }
+  }
+
+  .additional {
+    margin-bottom: 142px;
   }
 
   .additional-product__name,
@@ -128,6 +149,7 @@
 @media (min-width: @desktops) {
   .additional {
     display: flex;
+    margin-bottom: 0;
   }
 
   .additional__wrapper {
@@ -138,7 +160,7 @@
   .additional__goods {
     margin-left: 0;
     padding: 0;
-    margin-bottom: 85px;
+    margin-bottom: 62px;
   }
 
   .additional__goods::before {
@@ -193,11 +215,26 @@
 
   .additional-product__feuture {
     margin-left: 0;
-    margin-top: 15px;
+    margin-top: 10px;
     padding: 0;
     font-size: 16px;
     width: 280px;
     margin-right: 55px;
+
+    &--sugar {
+      margin-right: 48px;
+      width: 290px;
+    }
+
+    &--milk {
+      width: 290px;
+      margin-right: 48px;
+    }
+
+    &--vitamins {
+      width: 290px;
+      margin-right: 48px;
+    }
   }
 
   .product-list__order {

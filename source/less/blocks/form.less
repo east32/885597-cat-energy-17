@@ -1,3 +1,7 @@
+.error-input {
+  border: 2px solid red;
+}
+
 .form__heading {
   margin-top: 40px;
   margin-bottom: 45px;
@@ -54,6 +58,15 @@
     border: solid 2px #444444;
   }
 
+  &:not(:placeholder-shown) {
+    &:required:invalid {
+      border: 2px solid red;
+    }
+
+    &:required:invalid + svg path {
+      fill: red;
+    }
+   }
 
   &--name {
     width: 228px;
@@ -96,10 +109,6 @@
     padding: 0;
   }
 
-
-  &--name:required:focus:invalid {
-    border: solid 2px red;
-  }
 }
 
 .form__field--mail:focus + svg path {
@@ -114,15 +123,48 @@
   font-size: 24px;
 
   &--contacts {
+    position: relative;
     margin-bottom: 36px;
   }
 
   &--comments {
+    position: relative;
     margin-bottom: 35px;
   }
 
   &--addition {
+    position: relative;
     margin-bottom: 38px;
+  }
+
+  &--contacts::after {
+    top: 15px;
+    content: "";
+    position: absolute;
+    width: 99px;
+    height: 3px;
+    background-color: #68b738;
+    right: -42px;
+  }
+
+  &--comments::after {
+    top: 15px;
+    content: "";
+    position: absolute;
+    width: 158px;
+    height: 3px;
+    background-color: #68b738;
+    right: -198px;
+  }
+
+  &--addition::after {
+    top: 15px;
+    content: "";
+    position: absolute;
+    width: 136px;
+    height: 3px;
+    background-color: #68b738;
+    right: -177px;
   }
 }
 
@@ -334,14 +376,14 @@
 
   .form__image {
     &--mail {
-      top: 13px;
-      right: 65px;
+      top: 17px;
+      right: 62px;
       position: absolute;
     }
 
     &--phone {
-      top: 10px;
-      right: 62px;
+      top: 15px;
+      right: 60px;
       position: absolute;
     }
   }
@@ -433,6 +475,66 @@
     &--addition {
       margin-bottom: 70px;
     }
+
+    &--addition::before {
+      top: 15px;
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 3px;
+      background-color: #68b738;
+      left: -70px;
+    }
+
+    &--comments::before {
+      top: 17px;
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 3px;
+      background-color: #68b738;
+      left: -70px;
+    }
+
+    &--contacts::before {
+      top: 15px;
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 3px;
+      background-color: #68b738;
+      left: -70px;
+    }
+
+    &--comments::after {
+      top: 16px;
+      content: "";
+      position: absolute;
+      width: 475px;
+      height: 3px;
+      background-color: #68b738;
+      right: -515px;
+    }
+
+    &--addition::after {
+      top: 15px;
+      content: "";
+      position: absolute;
+      width: 446px;
+      height: 3px;
+      background-color: #68b738;
+      right: -487px;
+   }
+
+    &--contacts::after {
+      top: 15px;
+      content: "";
+      position: absolute;
+      width: 150px;
+      height: 3px;
+      background-color: #68b738;
+      right: -190px;
+    }
   }
 
   .form__wrapper--checkbox {
@@ -453,7 +555,7 @@
   .form__btn {
     margin: 0;
     border: none;
-    font-size: 16px;
+    font-size: 20px;
     text-transform: uppercase;
     color: @bg-color;
     text-align: center;
@@ -513,8 +615,70 @@
     color: #111111;
   }
 
-  .form__title--addition {
-    margin-left: -14px;
+  .form__title {
+    &--addition {
+      margin-left: -14px;
+    }
+
+    &--addition::before {
+      top: 15px;
+      content: "";
+      position: absolute;
+      width: 70px;
+      height: 3px;
+      background-color: #68b738;
+      left: -108px;
+    }
+
+    &--comments::before {
+      top: 17px;
+      content: "";
+      position: absolute;
+      width: 37px;
+      height: 3px;
+      background-color: #68b738;
+      left: -111px;
+    }
+
+    &--contacts::before {
+      top: 15px;
+      content: "";
+      position: absolute;
+      width: 70px;
+      height: 3px;
+      background-color: #68b738;
+      left: -111px;
+    }
+
+    &--comments::after {
+      top: 16px;
+      content: "";
+      position: absolute;
+      width: 1110px;
+      height: 3px;
+      background-color: #68b738;
+      left: 220px;;
+    }
+
+    &--addition::after {
+      top: 15px;
+      content: "";
+      position: absolute;
+      width: 1080px;
+      height: 3px;
+      background-color: #68b738;
+      left: 255px;
+   }
+
+    &--contacts::after {
+      top: 15px;
+      content: "";
+      position: absolute;
+      width: 780px;
+      height: 3px;
+      background-color: #68b738;
+      left: 550px;
+    }
   }
 
   .form__feutures {
@@ -527,7 +691,7 @@
   .form__slogan {
     padding: 0;
     margin-left: 1px;
-    margin-bottom: 68px;
+    margin-bottom: 66px;
     font-size: 20px;
     font-weight: 400;
     line-height: 1.5;
@@ -555,6 +719,7 @@
   }
 
   .form__field {
+    font-size: 20px;
     padding-left: 16px;
     margin-left: 16px;
     border: solid 1px rgba(205, 205, 205, 0.5);
@@ -576,6 +741,7 @@
     }
 
     &--mail {
+      text-transform: uppercase;
       width: 485px;
       height: 51px;
       margin-right: 92px;
