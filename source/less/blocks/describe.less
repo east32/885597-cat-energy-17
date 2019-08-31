@@ -17,13 +17,13 @@
   margin-bottom: 20px;
 }
 
-.item__describe {
+.describing__text {
   font-family: "Arial", sans-serif;
   line-height: 1.29;
   color: @add-font-color;
 }
 
-.list__item--use::before {
+.describing__item--use::before {
   position: absolute;
   content: "";
   left: 0;
@@ -39,7 +39,7 @@
   }
 }
 
-.list__item--form::before {
+.describing__item--form::before {
   position: absolute;
   content: "";
   left: 0;
@@ -55,7 +55,7 @@
   }
 }
 
-.list__item--food::before {
+.describing__item--food::before {
   position: absolute;
   content: "";
   left: 0;
@@ -71,7 +71,7 @@
   }
 }
 
-.list__item--time::before {
+.describing__item--time::before {
   position: absolute;
   content: "";
   left: 0;
@@ -87,13 +87,13 @@
   }
 }
 
-.list__item {
+.describing__item {
   position: relative;
   padding-left: 80px;
   margin-bottom: 27px;
 }
 
-.item__describe br {
+.describing__text br {
   display: none;
 }
 
@@ -117,17 +117,17 @@
     margin-bottom: 50px;
   }
 
-  .list__item {
+  .describing__item {
     padding: 0;
     width: 50%;
     position: relative;
   }
 
-  .list__item:first-child {
+  .describing__item:first-child {
     margin-bottom: 205px;
   }
 
-  .item__describe {
+  .describing__text {
     padding-top: 5px;
     margin-left: -10px;
     width: 245px;
@@ -137,11 +137,11 @@
     color: #444444;
   }
 
-  .item__describe br {
+  .describing__text br {
     display: block;
   }
 
-  .list__item::before {
+  .describing__item::before {
     position: absolute;
     content: "";
     left: -10px;
@@ -181,7 +181,7 @@
     margin-left: 10px;
   }
 
-  .list__item:first-child {
+  .describing__item:first-child {
     margin-bottom: 0;
   }
 }

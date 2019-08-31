@@ -4,12 +4,14 @@
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="/fonts/oswaldmedium.woff2" as="font">
+    <link rel="preload" href="/fonts/oswaldregular.woff2" as="font">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="js/picturefill.min.js"></script>
   </head>
   <body>
       <div style="display: none">
-          <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-cat-pro - tablet" viewbox="0 0 134 56">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-cat-pro-tablet" viewbox="0 0 134 56">
   <g>
     <path d="M123.1,5.8c1.2-1.9,2.7-3.4,4.5-4.6c1-0.7,1.6-0.7,2.2,0.6c0.8,1.9,1.5,3.9,0.9,6c-0.2,0.8-0.1,1.4,0.4,2.1
     c0.6,0.8,1.1,1.6,1.6,2.3c1.3,1.9,1.8,3.9,0.9,6.2c-0.4,1-0.4,2-0.2,3.1c0.2,1,0.2,2,0,3c-0.3,1.6-1.1,2.7-2.7,3.2
@@ -171,7 +173,7 @@ c0-0.2,0-2,1.2-2.3C13.5,8.3,13.7,8.3,13.7,8.3z"></path>
         <picture>
           <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
           <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-          <img class="logo__img" src="img/logo-mobile.svg" alt="Логотип Кэт Энерджи">
+          <img class="page-header__img" src="img/logo-mobile.svg" alt="Логотип Кэт Энерджи">
             </picture>
       </a>
     </div>
@@ -181,14 +183,14 @@ c0-0.2,0-2,1.2-2.3C13.5,8.3,13.7,8.3,13.7,8.3z"></path>
       </button>
     <div class="main-nav__wrapper">
       <ul class="main-nav__list site-list">
-        <li class="site-list__item site-list__item--active">
-          <a class="site-list__link link__catalog" href="index.html">Главная</a>
+        <li class="site-list__item">
+          <a class="site-list__link site-list__catalog" href="index.html">Главная</a>
         </li>
         <li class="site-list__item">
-          <a class="site-list__link link__catalog--active" href="#">Каталог продукции</a>
+          <a class="site-list__link site-list__catalog site-list__catalog--active" href="#">Каталог продукции</a>
         </li>
         <li class="site-list__item">
-          <a class="site-list__link link__catalog" href="form.html">Подбор программы</a>
+          <a class="site-list__link site-list__catalog" href="form.html">Подбор программы</a>
         </li>
       </ul>
     </div>
@@ -206,7 +208,7 @@ c0-0.2,0-2,1.2-2.3C13.5,8.3,13.7,8.3,13.7,8.3z"></path>
         <div class="catalog-product__wrapper">
           <ul class="catalog-product__list product-list">
             <li class="product-list__item">
-                <div class="product-list__image image__tablet">
+                <div class="product-list__image product-list__image--tablet">
                 <picture>
                   <source media="(min-width: 1300px)" srcset="img/chicken-small-desktop@1x.png 1x, img/chicken-small-desktop@2x.png 2x">
                   <source media="(min-width: 768px)" srcset="img/chicken-small-tablet@1x.png 1x, img/chicken-small-tablet@2x.png 2x">
@@ -216,17 +218,17 @@ c0-0.2,0-2,1.2-2.3C13.5,8.3,13.7,8.3,13.7,8.3z"></path>
                 <div class="item-container">
                 <h3 class="item-container__heading">Cat Energy PRO 500 г</h3>
                 <div class="item-container__wrapper">
-                <ul class="item__properties">
-                  <li class="properties__describing">
-                    <span class="properties__value">Объем</span>
-                    <span class="properties__value">500 г</span>
+                <ul class="item-container__properties">
+                  <li class="item-container__describing">
+                    <span class="item-container__value">Объем</span>
+                    <span class="item-container__value">500 г</span>
                   </li>
-                  <li class="properties__describing">
-                    <span class="properties__value">Вкус</span>
-                    <span class="properties__value">Курица</span></li>
-                  <li class="properties__describing">
-                    <span class="properties__value">Цена </span>
-                    <span class="properties__value">700 р.</span>
+                  <li class="item-container__describing">
+                    <span class="item-container__value">Вкус</span>
+                    <span class="item-container__value">Курица</span></li>
+                  <li class="item-container__describing">
+                    <span class="item-container__value">Цена </span>
+                    <span class="item-container__value">700 р.</span>
                   </li>
                 </ul>
                 </div>
@@ -244,17 +246,17 @@ c0-0.2,0-2,1.2-2.3C13.5,8.3,13.7,8.3,13.7,8.3z"></path>
                 <div class="item-container">
                 <h3 class="item-container__heading">Cat Energy PRO 1000 г</h3>
                 <div class="item-container__wrapper">
-                <ul class="item__properties">
-                  <li class="properties__describing">
-                    <span class="properties__value">Объем</span>
-                    <span class="properties__value">1000 г</span>
+                <ul class="item-container__properties">
+                  <li class="item-container__describing">
+                    <span class="item-container__value">Объем</span>
+                    <span class="item-container__value">1000 г</span>
                   </li>
-                  <li class="properties__describing">
-                    <span class="properties__value">Вкус</span>
-                    <span class="properties__value">Курица</span></li>
-                  <li class="properties__describing">
-                    <span class="properties__value">Цена </span>
-                    <span class="properties__value">1000 р.</span>
+                  <li class="item-container__describing">
+                    <span class="item-container__value">Вкус</span>
+                    <span class="item-container__value">Курица</span></li>
+                  <li class="item-container__describing">
+                    <span class="item-container__value">Цена </span>
+                    <span class="item-container__value">1000 р.</span>
                   </li>
                 </ul>
                   </div>
@@ -262,7 +264,7 @@ c0-0.2,0-2,1.2-2.3C13.5,8.3,13.7,8.3,13.7,8.3z"></path>
                   <a class="item-order" href="#">Заказать</a>
             </li>
             <li class="product-list__item">
-                    <div class="product-list__image image__tablet">
+                    <div class="product-list__image product-list__image--tablet">
                       <picture>
                         <source media="(min-width: 1300px)" srcset="img/fish-small-desktop@1x.png 1x, img/fish-small-desktop@2x.png 2x">
                         <source media="(min-width: 768px)" srcset="img/fish-small-tablet@1x.png 1x, img/fish-small-tablet@2x.png 2x">
@@ -272,17 +274,17 @@ c0-0.2,0-2,1.2-2.3C13.5,8.3,13.7,8.3,13.7,8.3z"></path>
                     <div class="item-container">
                     <h3 class="item-container__heading">Cat Energy PRO 500 г</h3>
                     <div class="item-container__wrapper">
-                    <ul class="item__properties">
-                      <li class="properties__describing">
-                        <span class="properties__value">Объем</span>
-                        <span class="properties__value">500 г</span>
+                    <ul class="item-container_properties">
+                      <li class="item-container__describing">
+                        <span class="item-container__value">Объем</span>
+                        <span class="item-container__value">500 г</span>
                       </li>
-                      <li class="properties__describing">
-                        <span class="properties__value">Вкус</span>
-                        <span class="properties__value">рыба</span></li>
-                      <li class="properties__describing">
-                        <span class="properties__value">Цена </span>
-                        <span class="properties__value">700 р.</span>
+                      <li class="item-container__describing">
+                        <span class="item-container__value">Вкус</span>
+                        <span class="item-container__value">рыба</span></li>
+                      <li class="item-container__describing">
+                        <span class="item-container__value">Цена </span>
+                        <span class="item-container__value">700 р.</span>
                       </li>
                       </ul>
                   </div>
@@ -300,24 +302,24 @@ c0-0.2,0-2,1.2-2.3C13.5,8.3,13.7,8.3,13.7,8.3z"></path>
                     <div class="item-container">
                     <h3 class="item-container__heading">Cat Energy PRO 1000 г</h3>
                     <div class="item-container__wrapper">
-                    <ul class="item__properties">
-                        <li class="properties__describing">
-                          <span class="properties__value">Объем</span>
-                          <span class="properties__value">1000 г</span>
+                    <ul class="item-container__properties">
+                        <li class="item-container__describing">
+                          <span class="item-container__value">Объем</span>
+                          <span class="item-container__value">1000 г</span>
                         </li>
-                        <li class="properties__describing">
-                          <span class="properties__value">Вкус</span>
-                          <span class="properties__value">Рыба</span></li>
-                        <li class="properties__describing">
-                          <span class="properties__value">Цена </span>
-                          <span class="properties__value">1000 р.</span>
+                        <li class="item-container__describing">
+                          <span class="item-container__value">Вкус</span>
+                          <span class="item-container__value">Рыба</span></li>
+                        <li class="item-container__describing">
+                          <span class="item-container__value">Цена </span>
+                          <span class="item-container__value">1000 р.</span>
                         </li>
                   </ul></div>
                   </div>
                   <a class="item-order" href="#">Заказать</a>
             </li>
             <li class="product-list__item">
-                    <div class="product-list__image image__tablet">
+                    <div class="product-list__image product-list__image--tablet">
                       <picture>
                         <source media="(min-width: 1300px)" srcset="img/buckwheat-small-desktop@1x.png 1x, img/buckwheat-small-desktop@2x.png 2x">
                         <source media="(min-width: 768px)" srcset="img/buckwheat-small-tablet@1x.png 1x, img/buckwheat-small-tablet@2x.png 2x">
@@ -327,17 +329,17 @@ c0-0.2,0-2,1.2-2.3C13.5,8.3,13.7,8.3,13.7,8.3z"></path>
                     <div class="item-container">
                     <h3 class="item-container__heading">Cat Energy Slim 500 г</h3>
                     <div class="item-container__wrapper">
-                    <ul class="item__properties">
-                      <li class="properties__describing">
-                        <span class="properties__value">Объем</span>
-                        <span class="properties__value">500 г</span>
+                    <ul class="item-container__properties">
+                      <li class="item-container__describing">
+                        <span class="item-container__value">Объем</span>
+                        <span class="item-container__value">500 г</span>
                       </li>
-                      <li class="properties__describing">
-                        <span class="properties__value">Вкус</span>
-                        <span class="properties__value">Гречка</span></li>
-                      <li class="properties__describing">
-                        <span class="properties__value">Цена </span>
-                        <span class="properties__value">400 Р.</span>
+                      <li class="item-container__describing">
+                        <span class="item-container__value">Вкус</span>
+                        <span class="item-container__value">Гречка</span></li>
+                      <li class="item-container__describing">
+                        <span class="item-container__value">Цена </span>
+                        <span class="item-container__value">400 Р.</span>
                       </li>
                   </ul></div>
                   </div>
@@ -354,25 +356,25 @@ c0-0.2,0-2,1.2-2.3C13.5,8.3,13.7,8.3,13.7,8.3z"></path>
                     <div class="item-container">
                     <h3 class="item-container__heading">Cat Energy Slim 1000 г</h3>
                     <div class="item-container__wrapper">
-                    <ul class="item__properties">
-                      <li class="properties__describing">
-                        <span class="properties__value">Объем</span>
-                        <span class="properties__value">1000 г</span>
+                    <ul class="item-container__properties">
+                      <li class="item-container__describing">
+                        <span class="item-container__value">Объем</span>
+                        <span class="item-container__value">1000 г</span>
                       </li>
-                      <li class="properties__describing">
-                        <span class="properties__value">Вкус</span>
-                        <span class="properties__value">Гречка</span>
+                      <li class="item-container__describing">
+                        <span class="item-container__value">Вкус</span>
+                        <span class="item-container__value">Гречка</span>
                       </li>
-                      <li class="properties__describing">
-                        <span class="properties__value">Цена</span>
-                        <span class="properties__value">700 Р.</span>
+                      <li class="item-container__describing">
+                        <span class="item-container__value">Цена</span>
+                        <span class="item-container__value">700 Р.</span>
                       </li>
                   </ul></div>
                   </div>
                   <a class="item-order" href="#">Заказать</a>
             </li>
             <li class="product-list__item">
-                    <div class="product-list__image image__tablet">
+                    <div class="product-list__image product-list__image--tablet">
                       <picture>
                         <source media="(min-width: 1300px)" srcset="img/rice-small-desktop@1x.png 1x, img/rice-small-desktop@2x.png 2x">
                         <source media="(min-width: 768px)" srcset="img/rice-small-tablet@1x.png 1x, img/rice-small-tablet@2x.png 2x">
@@ -382,27 +384,27 @@ c0-0.2,0-2,1.2-2.3C13.5,8.3,13.7,8.3,13.7,8.3z"></path>
                     <div class="item-container">
                     <h3 class="item-container__heading">Cat Energy Slim 500 г</h3>
                     <div class="item-container__wrapper">
-                    <ul class="item__properties">
-                      <li class="properties__describing">
-                        <span class="properties__value">Объем</span>
-                        <span class="properties__value">500 г</span>
+                    <ul class="item-container__properties">
+                      <li class="item-container__describing">
+                        <span class="item-container__value">Объем</span>
+                        <span class="item-container__value">500 г</span>
                       </li>
-                      <li class="properties__describing">
-                        <span class="properties__value">Вкус</span>
-                        <span class="properties__value">Рис</span></li>
-                      <li class="properties__describing">
-                        <span class="properties__value">Цена </span>
-                        <span class="properties__value">400 р.</span>
+                      <li class="item-container__describing">
+                        <span class="item-container__value">Вкус</span>
+                        <span class="item-container__value">Рис</span></li>
+                      <li class="item-container__describing">
+                        <span class="item-container__value">Цена </span>
+                        <span class="item-container__value">400 р.</span>
                       </li>
                   </ul></div>
                   </div>
                   <a class="item-order" href="#">Заказать</a>
             </li>
-            <li class="product-list__item item__more">
-                <div class="additional__container">
-                    <p class="additional__describing">Показать еще 100500 товаров</p>
-                    <p class="additional__slogan">На самом деле вкусов гораздо больше!</p>
-                    <a class="additional__order" href="#">Показать все</a>
+            <li class="product-list__item product-list__item--more">
+                <div class="product-list__additional">
+                    <p class="product-list__describing">Показать еще 100500 товаров</p>
+                    <p class="product-list__slogan">На самом деле вкусов гораздо больше!</p>
+                    <a class="product-list__order" href="#">Показать все</a>
                   </div>
             </li>
         </ul>
@@ -410,49 +412,48 @@ c0-0.2,0-2,1.2-2.3C13.5,8.3,13.7,8.3,13.7,8.3z"></path>
       </section>
 
       <section class="additional">
-
       <div class="additional__wrapper">
         <h2 class="additional__goods">Дополнительные товары</h2>
-        <ul class="additional__list additional-product__list">
-          <li class="additional-product__item">
-            <div class="additional-product__wrapper">
-            <h3 class="additional-product__heading">Сахарозаменитель</h3>
-            <ul class="additional-product__feuture additional-product__feuture--sugar">
-              <li class="additional-product__name">1 упаковка (100 г)</li>
-              <li class="additional-product__value">200 Р.</li>
+        <ul class="additional__list additional__list--product">
+          <li class="additional__item">
+            <div class="additional__product">
+            <h3 class="additional__heading">Сахарозаменитель</h3>
+            <ul class="additional__feuture additional__feuture--sugar">
+              <li class="additional__name">1 упаковка (100 г)</li>
+              <li class="additional__value">200 Р.</li>
             </ul>
           </div>
-              <a href="#" class="item-order product-list__order">Заказать</a>
+              <a href="#" class="additional__order additional__order--link">Заказать</a>
             </li>
-            <li class="additional-product__item">
-                <div class="additional-product__wrapper">
-                <h3 class="additional-product__heading">Питьевая вода</h3>
-                <ul class="additional-product__feuture additional-product__feuture--water ">
-                  <li class="additional-product__name">5 литров</li>
-                  <li class="additional-product__value">50 Р.</li>
+            <li class="additional__item">
+                <div class="additional__product">
+                <h3 class="additional__heading">Питьевая вода</h3>
+                <ul class="additional__feuture additional__feuture--water ">
+                  <li class="additional__name">5 литров</li>
+                  <li class="additional__value">50 Р.</li>
                 </ul>
                 </div>
-              <a href="#" class="item-order product-list__order">Заказать</a>
+              <a href="#" class="additional__order additional__order--link">Заказать</a>
             </li>
-            <li class="additional-product__item">
-                <div class="additional-product__wrapper">
-                <h3 class="additional-product__heading">Молоко</h3>
-                <ul class="additional-product__feuture additional-product__feuture--milk">
-                  <li class="additional-product__name">1 литр</li>
-                  <li class="additional-product__value">100 Р.</li>
+            <li class="additional__item">
+                <div class="additional__product">
+                <h3 class="additional__heading">Молоко</h3>
+                <ul class="additional__feuture additional__feuture--milk">
+                  <li class="additional__name">1 литр</li>
+                  <li class="additional__value">100 Р.</li>
                 </ul>
                 </div>
-              <a href="#" class="item-order product-list__order">Заказать</a>
+              <a href="#" class="additional__order additional__order--link">Заказать</a>
             </li>
-            <li class="additional-product__item">
-                <div class="additional-product__wrapper">
-                <h3 class="additional-product__heading ">Витамины</h3>
-                <ul class="additional-product__feuture additional-product__feuture--vitamins">
-                  <li class="additional-product__name">1 упаковка (30 г)</li>
-                  <li class="additional-product__value">300 Р.</li>
+            <li class="additional__item">
+                <div class="additional__product">
+                <h3 class="additional__heading ">Витамины</h3>
+                <ul class="additional__feuture additional__feuture--vitamins">
+                  <li class="additional__name">1 упаковка (30 г)</li>
+                  <li class="additional__value">300 Р.</li>
                 </ul>
               </div>
-              <a href="#" class="item-order product-list__order">Заказать</a>
+              <a href="#" class="additional__order additional__order--link">Заказать</a>
             </li>
           </ul>
         </div>
@@ -469,19 +470,21 @@ c0-0.2,0-2,1.2-2.3C13.5,8.3,13.7,8.3,13.7,8.3z"></path>
       <span class="partnership__city">Санкт-Петербург</span>
       </div>
     </div>
-        <div class="map"></div>
+        <div class="map">
+          <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003035!2d30.320858716011124!3d59.93871916905429!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1564326542980!5m2!1sru!2sru"  allowfullscreen></iframe>
+        </div>
     </main>
 
     <footer class="page-footer">
       <div class="page-footer__logo">
-          <a href="index.html" class="footer__logo">
-            <img class="logo__img" src="img/logo-footer.svg" width="128" height="24" alt="Логотип Кэт Энерджи">
+          <a href="index.html" class="page-footer__link">
+            <img class="page-footer__img" src="img/logo-footer.svg" width="128" height="24" alt="Логотип Кэт Энерджи">
           </a>
       </div>
       <div class="page-footer__social social">
           <ul class="social__list">
             <li class="social__item">
-              <a class="social__link social__link--vkontakte" href="#">
+              <a class="social__link social__link--vkontakte" href="#" aria-label="Ссылка на страницу кэт энерджи в вк">
                 <svg class="img-vk" version="1.1" width="22" height="12" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 22 12" style="enable-background:new 0 0 22 12;" xml:space="preserve">
                 <path d="M17.6,12c-0.3,0-0.9-0.1-1.5-0.5c-0.5-0.3-0.9-0.7-1.3-1.2c-0.3-0.3-0.9-0.9-1.1-0.9c-0.2,0.1-0.4,0.7-0.3,1.2
                 c0,0.1,0,0.6-0.3,0.9c-0.3,0.3-0.8,0.4-0.9,0.4h-1.4c-0.7,0-3.2-0.2-5.4-2.3C2.5,7.1,0.2,2.2,0.1,2C0,1.6-0.1,1.2,0.2,0.9
@@ -499,8 +502,8 @@ c0-0.2,0-2,1.2-2.3C13.5,8.3,13.7,8.3,13.7,8.3z"></path>
               </svg></a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--facebook" href="#">
-                <svg class="img-insta" version="1.1" height="23" width="23" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16.1 16" style="enable-background:new 0 0 16.1 16;" xml:space="preserve">
+              <a class="social__link social__link--facebook" href="#" aria-label="Ссылка на страницу кэт энерджи в инстаграм">
+                <svg class="img-insta" version="1.1" height="23" width="23" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16.1 16" style="enable-background:new 0 0 16.1 16;" xml:space="preserve">
                 <style type="text/css">
                 </style>
                 <path class="st0" d="M11.8,1C13.6,1,15,2.4,15,4.2v7.7c0,1.7-1.4,3.1-3.1,3.1H4.2C2.4,15,1,13.6,1,11.8V4.2C1,2.4,2.4,1,4.2,1H11.8
@@ -511,8 +514,8 @@ c0-0.2,0-2,1.2-2.3C13.5,8.3,13.7,8.3,13.7,8.3z"></path>
               </svg></a>
               </li>
               <li class="social__item">
-                <a class="social__link social__link--instagram" href="#">
-                    <svg class="img-fb" version="1.1" width="10" height="19" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 10 19" style="enable-background:new 0 0 10 19;" xml:space="preserve">
+                <a class="social__link social__link--instagram" href="#" aria-label="Ссылка на страницу кэт энерджи в фэйсбук">
+                    <svg class="img-fb" version="1.1" width="10" height="19"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 10 19" style="enable-background:new 0 0 10 19;" xml:space="preserve">
                     <path d="M7.1,19H2v-8.8H0V5.8h1.9C1.8,3.8,2.1,2.4,3,1.4C3.8,0.5,5,0.1,6.5,0H10v4.2H7.2C7.1,4.4,7,5,7,5.8h3v4.4H7.1V19z M3.1,18
                     h2.8V9.1h2.9V6.8H5.9V6.3c0-1.4,0-2.6,0.7-3.1l0.1-0.1h2.1V1H6.5c-1.2,0.1-2,0.4-2.6,1c-0.8,0.8-1,2.3-0.8,4.2l0.1,0.6H1.1v2.3h2V18
                     z"></path>
@@ -523,7 +526,7 @@ c0-0.2,0-2,1.2-2.3C13.5,8.3,13.7,8.3,13.7,8.3z"></path>
           </div>
           <div class="page-footer__copyright copyright">
               <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__text">HTML Academy</a>
-              <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+              <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Ссылка на страницу курсов HTML Academy">
                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="48" viewBox="0 0 60 60"><path fill="#2E368F" d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"></path></svg>
               </a>
             </div>
