@@ -22,11 +22,11 @@ var phone = document.querySelector('[name=phone]');
               }
             });
             form.addEventListener('submit', function (evt) {
-               if (this.petname.is|| !weight.value || !email.value || !phone.value) {
+              if (this.petname.is|| !weight.value || !email.value || !phone.value) {
                 evt.preventDefault();
                 petname.classList.add (error-input);
                 weight.classList.add (error-input);
                 email.classList.add (error-input);
                 phone.classList.add (error-input);
-               }
+
             });
